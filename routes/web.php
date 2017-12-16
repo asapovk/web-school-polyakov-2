@@ -17,11 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::group(['middleware' => ['web']], function () {
+//Route::group(['middleware' => ['web']], function () {
   Route::get('/signup', function () {
       return view('signup');
   });
@@ -35,11 +34,17 @@ Route::group(['middleware' => ['web']], function () {
     'as' => 'signup'
   ]);
 
-  Route::post('/dashboard', [
-    'uses' => 'UserController@getDashboard',
-    'as' => 'dashboard'
+  Route::post('/signin', [
+    'uses' => 'UserController@postSignIn',
+    'as' => 'signin'
   ]);
-});
+
+  Route::get('/dashboard', [
+    'uses' => 'UserController@getDashboard',
+    'as' => 'dashboard',
+    'middleware' => 'auth'
+  ]);
+//});
 
 
 

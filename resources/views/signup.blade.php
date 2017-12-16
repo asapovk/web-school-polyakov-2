@@ -7,6 +7,19 @@
 
 @section('content')
 @include('includes.header')
+@if (count($errors) > 0)
+  <div class='row'>
+    <div class='col-md-6'>
+      <ul>
+        @foreach($errors->all() as $error)
+
+        <li>{{ $error }}</li>
+
+        @endforeach
+      </ul>
+    </div>
+  </div>
+@endif
 <center>
   <h1 style="margin-top:80px">Регестрация</h1>
 </center>
@@ -14,15 +27,15 @@
   <div class='row'>
     <div class='col-lg-4 col-lg-offset-4' style="background-color:rgb(51,51,51);" style="margin:10px;" >
       <form action="{{ route('signup') }}" method="post">
-        <div class="form-group">
+        <div class="form-group {{$errors->has('username') ? 'has-error' : ''}}">
           <label for="username">-</label>
-          <input type="text" class="form-control" required placeholder="Имя пользователя" id="username" name="username">
+          <input type="text" class="form-control" required placeholder="Имя пользователя" id="username" name="username" value="{{ Request::old('username') }}">
         </div>
-       <div class="form-group">
+       <div class="form-group {{$errors->has('email') ? 'has-error' : ''}}">
          <label for="email">-</label>
-         <input type="email" class="form-control" required placeholder="Email" id="email" name="email">
+         <input type="email" class="form-control" required placeholder="Email" id="email" name="email" value="{{ Request::old('email') }}">
        </div>
-       <div class="form-group">
+       <div class="form-group {{$errors->has('password') ? 'has-error' : ''}}">
          <label for="pwd">-</label>
          <input type="password" class="form-control" required placeholder="Пароль" id="pwd" name = "password">
        </div>
