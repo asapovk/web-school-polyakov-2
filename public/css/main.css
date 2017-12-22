@@ -6,17 +6,22 @@ body {
   background-color: #FFFFFF;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h4,h5 {
   font-family:"Raleway";
   font-weight:300;
   color:#333;
 }
 
-p {
-
+h6 {
+  color: #FFFFFF
 
 }
 
+
+
+.HeadEr{
+  background-color: #1E202C;
+}
 #logo{
   font-family: 'Vollkorn SC', serif;
   color: #212529;
@@ -27,12 +32,12 @@ p {
 .footer {
 
    color:#BBBBBB;
-   left: 0;
-   bottom: 0;
+
    width: 100%;
    min-height:100px;
    text-align: center;
    background-color: #292C2F;
+   bottom: 0;
 
 }
 
@@ -43,15 +48,19 @@ p {
 
 
 }
-
+.welcomeText {
+  font-family:"Raleway";
+  font-size: 50px;
+  color:#FFFFFF;
+}
 #help {
 
   background-image: url(/img/picture2.png);
-  margin-top: -20px;
-  padding-top: 100px;
+  margin-top: -80px;
+  padding-top: 250px;
 
   text-align:center;
-  min-height:500px;
+  min-height:700px;
 }
 
 .form-group {
@@ -66,5 +75,15 @@ p {
 
 
 .tpk {
-  min-height: 500px;
+  min-height: 280px;
+
+
+}
+
+.regp {
+  min-height: 390px;
+
+}
+.logp {
+  min-height:240px;
 }

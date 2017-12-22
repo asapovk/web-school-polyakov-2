@@ -25,7 +25,7 @@
 </center>
 <div class='container' style="margin-top:80px;" >
   <div class='row'>
-    <div class='col-lg-4 col-lg-offset-4' style="background-color:rgb(51,51,51);" style="margin:10px;" >
+    <div class='col-lg-4 col-lg-offset-4 regp' style="background-color:rgb(51,51,51);" style="margin:10px;" >
       <form action="{{ route('signup') }}" method="post">
         <div class="form-group {{$errors->has('username') ? 'has-error' : ''}}">
           <label for="username">-</label>
@@ -49,8 +49,11 @@
        <button type="submit" name="button" class="btn btn-default">Подтвердить</button>
        <input type='hidden' name="_token" value="{{ Session::token() }}">
       </form>
+      <a href='/signin'><h6 style='text-align:center;'>У меня уже есть аккаунт</h6></a>
+
     </div>
+
   </div>
 </div>
-@include('includes.footer')
+
 @endsection

@@ -24,7 +24,7 @@
 </center>
 <div class='container' style="margin-top:80px;" >
   <div class='row'>
-    <div class='col-lg-4 col-lg-offset-4' style="background-color:rgb(51,51,51);" style="margin:10px;" >
+    <div class='col-lg-4 col-lg-offset-4 logp' style="background-color:rgb(51,51,51);" style="margin:10px;" >
       <form action="{{ route('signin') }}" method="post">
         <div class="form-group">
           <label for="username">-</label>
@@ -39,10 +39,11 @@
 
        <button type="submit" name="button" class="btn btn-default">Войти</button>
        <input type='hidden' name="_token" value="{{ Session::token() }}">
+       <a href='/signup'><h6 style='text-align:center;'>Зарегистрироваться</h6></a>
       </form>
     </div>
   </div>
 </div>
 
-@include('includes.footer')
+
 @endsection
