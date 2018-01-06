@@ -8,7 +8,12 @@
 
 
 @section('content')
-@include('includes.header')
+@if (Auth::check())
+     @include('includes.logged')
+
+@else
+     @include('includes.header')
+@endif
 <div id="help" class="container-fluid" >
 <h1 class='welcomeText'> Добро пожаловать </h1>
 

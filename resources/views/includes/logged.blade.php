@@ -2,8 +2,8 @@
 <div class="navbar navbar-default HeadEr">
   <div class='container-fluid'>
     <ul class='nav navbar-nav navbar-right'>
-        <li> <a href='/signup' class='navbar-brand'>Зарегестрироваться</a> <li>
-        <li> <a href='/signin' class='navbar-brand'>Войти</a> <li>
+        <li> <a class='navbar-brand'>Личный кабинет</a> <li>
+        <li> <a href="{{ Session::flush() }}"class='navbar-brand'>Выйти</a> <li>
     </ul>
     <div class="navbar-brand" id='logo' >"Онлайн-школа"</div>
 

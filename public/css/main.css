@@ -57,10 +57,10 @@ h6 {
 
   background-image: url(/img/picture2.png);
   margin-top: -80px;
-  padding-top: 250px;
+  padding-top: 170px;
 
   text-align:center;
-  min-height:700px;
+  min-height:500px;
 }
 
 .form-group {
@@ -86,4 +86,55 @@ h6 {
 }
 .logp {
   min-height:240px;
+}
+
+.crsI {
+  background-color: #578775;
+  min-height:900px;
+}
+
+.crsR {
+  background-color: #3b609b;
+  min-height:600px;
+}
+
+.pnl {
+  font-family: "Lato";
+  padding:2px;
+  font-size:20px;
+}
+
+.panel-image {
+
+  margin: 2px;
+  border: 4px solid;
+  background: #7e8599;
+}
+
+.inside_course_img{
+  display: inline-block;
+  width: 20%;
+}
+
+.inside_course_text {
+  display: inline-block;
+  width: 80%;
+  float: right;
+}
+
+.iAuthor {
+  font-size:15px;
+  color:#cccccc
+}
+
+.inside_course {
+  display: inline-block;
+  text-align: center;
+  float: right;
+
+}
+
+.rating{
+  font-size:15px;
+  color:#cccccc
 }

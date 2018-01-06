@@ -25,6 +25,10 @@ Auth::routes();
       return view('signup');
   });
 
+  Route::get('/course-index', function () {
+      return view('course-index');
+  });
+
   Route::get('/signin', function () {
       return view('signin');
   });
